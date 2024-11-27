@@ -1,0 +1,24 @@
+def is_true(s: str) -> bool:
+    count = 0
+    i = 0
+
+    while i < len(s):
+        if s[i] == '(':
+            count += 1
+        elif s[i] == ')':
+            count -= 1
+        if count < 0:
+            return False
+        i += 1
+
+    return count == 0
+
+def main():
+    s = "(()())"
+    if is_true(s):
+        print("True")
+    else:
+        print("False")
+
+if __name__ == "__main__":
+    main()
