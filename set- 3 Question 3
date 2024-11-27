@@ -1,0 +1,17 @@
+def max_contig(a, n, k):
+    for i in range(n - k + 1):
+        max_val = a[i]
+        for j in range(1, k):
+            if a[i + j] > max_val:
+                max_val = a[i + j]
+        print(max_val, end=" ")
+    print()  # To move to the next line after printing all results
+
+def main():
+    a = [8, 5, 10, 7, 9, 4, 15, 12, 90, 13]
+    n = len(a)
+    k = 4
+    max_contig(a, n, k)
+
+if __name__ == "__main__":
+    main()
