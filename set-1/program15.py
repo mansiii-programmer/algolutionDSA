@@ -8,3 +8,4 @@ def print_pattern(n):
         print()
 n = 5
 print_pattern(n)
+
